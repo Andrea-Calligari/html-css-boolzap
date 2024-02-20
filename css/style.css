@@ -3,10 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-a {
+/* a {
     text-decoration: none;
     color: currentColor;
-}
+} */
 img{
     width: 100%;
 }
@@ -14,9 +14,10 @@ ul, ol menu{
     list-style: none;
 }
 /*---------------- LAYOUT------------- */
+
 #app{
     height: 100vh;
-    background-color: #DBDBD2;
+    background-image: -o-linear-gradient(green, grey);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,54 +25,217 @@ ul, ol menu{
 }  
 .side-bar{
     display: none;
-    background-color: blue;
+     background-color: #EAEAEA;
     width: 150px;
     flex: shrink 0;
 }
 .main-content{
-    background-color: orangered;
     flex-grow: 1;
 }
 .container{
     display: flex;
     width: 100%;
     height: 100%;
-
+}
+.tool-bar{
+    display: none
+   
+}
+.tool-list{
+    display: none;
+    margin-left: auto;
+}
+.avatar{
+    width: 30px;
+    border-radius: 30px;
+}
+.inline{
+    display: none;
+    display: inline;
+    color:#B1B1B1;
+    padding: 2px;
+}
+.notification-bar{
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #8EDAFC;
+    
+}
+.bell{
+ padding: 12px;    
+}
+.notification__body{
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    gap: 6px;
+}
+.title{
+    font-size: 11px;
+    
+}
+.link{
+    font-size: 10px;
+    
+}
+.lens{
+    padding: 18px;
+    font-size: 12px;
+}
+.search-bar{
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    padding: 8px;
+    background-color: white;
 
 }
+.card{
+    /* display: flex; */
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+     padding: 8px; 
+    border: 1px solid #EAEAEA;
+}
+.card__header{
+   /* display: flex; */
+   display: none;
 
+}
+.card__body{
+    display: none;
+    /* display: flex; */
+   flex-wrap: wrap;
+    padding: 8px;
+}
+.contact__tool{
 
-
+}
 /* --------------------MEDIA-QUERY-------------- */
-
+/* MEDIUM SCREEN */
 @media  (min-width: 768px){
     .side-bar{
-         display: block;
-         width: 60px;
+        display: block;
+        width: 50px;
     }
-    .container{
-        height: 100vh;
+    .tool-bar{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 8px;
+        border: 1px solid black;
     }
+    .card, .card__header{
+        display: block;
+        
+    }
+    
+    
 
-    
-   
-   
-    
 }
+
+
+
+
+/* --LARGE SCREEN-- */
 @media (min-width:992px){
 .container{
-    max-width: 950px;
+    width: 80%;
     margin: 0 auto;
 }
 .side-bar{
-    width: 150px;
+    width: 220px;
 }
+#app{
+    padding: 32px 0;
+
+}
+.tool-bar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid black;
+    
+}
+.tool-list{
+    display: inline;
+}
+.notification-bar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #8EDAFC;
+    /* border: 1px solid black; */
+
+    
+}
+.bell{
+ padding: 12px;    
+}
+.notification__body{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.title{
+    font-size: 11px;
+    
+}
+.link{
+    font-size: 10px;
+    
+}
+.lens{
+    padding: 10px;
+    font-size: 12px;
+    /* border: 1px solid black; */
+    background-color: white;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    /* padding: 8px; */
+    background-color: #EAEAEA;
+}
+.card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px; 
+    border: 1px solid #EAEAEA;
+}
+.card__header{
+   display: flex;
+}
+.card__body{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
 }
 
+}
 
+/* STYLE */
+.fs-10{
+    font-size: 12px;
+    padding: 5px ;
+}
+.fs-20{
+    font-size: 18px;
+}
+
+/* ----DEBUG----- */
 .debug #app{
-     border: 1px solid black; 
+     border: 3px solid black; 
 }
 .debug .container{
-border: 1px solid red;
+border: 1px solid white;
+}
+.debug .side-bar{
+    border: 1px solid white;
+    background-color: ;
 }
