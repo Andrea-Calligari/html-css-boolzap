@@ -50,8 +50,9 @@ body{
     flex-direction: column;
     justify-content: center;
     row-gap: 16px;
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
+    
 }
 .tool-bar{
     display: none
@@ -128,6 +129,7 @@ body{
 .main-content{
     display: flex;
     flex-direction: column;
+    overflow: scroll;
 }
 .chat-nav{
     display: flex;
@@ -148,6 +150,7 @@ body{
 }
 .chat-main{
     flex-grow: 1;
+    padding: 8px;
 }
 .chat-keyboard{
     background-color: #EAEAEA;
@@ -157,7 +160,7 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 8px;
-    padding: 24px;
+    padding: 18px;
 }
 #message{
     flex-grow: 1;
@@ -170,7 +173,7 @@ body{
    font-size: 24px;
    
 }
-   
+
 
 
 /* --------------------MEDIA-QUERY-------------- */
@@ -210,6 +213,7 @@ body{
 }
 .side-bar{
     width: 220px;
+    overflow: scroll;
 }
 #app{
     padding: 32px 0;
@@ -305,12 +309,13 @@ body{
 .msg-send{
     position: relative;
     max-width: 350px;
+    width: 100%;
     border: 1px solid transparent;
     background-color:#D5FABA ;
     align-self: flex-end;
     border-radius: 12px;
-    line-height: 24px;
-    padding: 8px;
+    line-height: 20px;
+    padding: 12px;
 }
 .msg-recived{
     position: relative;
@@ -318,14 +323,19 @@ body{
     border: 1px solid transparent;
     background-color:#FFFF;
     align-self: flex-start;
-    border-radius: 12px;
-    line-height: 24px;
-    padding: 8px;
+    border-radius: 10px;
+    line-height: 20px;
+    padding: 12px;
+    
 }
 .abs{
-    position: relative;
-    left: 290px;
+    position: absolute;
+    right: 4px;
+    bottom: 0px;
+    font-size: 12px;
+   
 }
+
 
 /* ----DEBUG----- */
  .debug #app{
